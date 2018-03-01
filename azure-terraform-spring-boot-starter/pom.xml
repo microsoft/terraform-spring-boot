@@ -2,16 +2,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.microsoft.azure</groupId>
-  <artifactId>azure-terraform-spring-boot-solution</artifactId>
+  <artifactId>azure-terraform-spring-boot-starter</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>pom</packaging>
 
-  <name>Terraform Spring Boot for Azure services solution</name>
+  <name>Azure Terraform Spring Boot Starter</name>
   <url>https://github.com/Microsoft/azure-terraform-spring-boot</url>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
 
   <scm>
     <connection>scm:git:git://github.com/Microsoft/azure-terraform-spring-boot.git</connection>
@@ -40,10 +35,29 @@
     </developer>
   </developers>
 
-  <modules>
-    <module>azure-terraform-client</module>
-    <module>azure-terraform-spring-boot-autoconfigure</module>
-    <module>azure-terraform-spring-boot-starter</module>
-    <module>azure-terraform-spring-boot-samples</module>
-  </modules>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <azterraform.version>1.0-SNAPSHOT</azterraform.version>
+    <springboot.version>1.5.10.RELEASE</springboot.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter</artifactId>
+      <version>${springboot.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.microsoft.azure</groupId>
+      <artifactId>azure-terraform-spring-boot</artifactId>
+      <version>${azterraform.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.microsoft.azure</groupId>
+      <artifactId>azure-terraform-client</artifactId>
+      <version>${azterraform.version}</version>
+    </dependency>
+  </dependencies>
 </project>
