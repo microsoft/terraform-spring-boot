@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.microsoft.terraform</groupId>
-  <artifactId>terraform-spring-boot-solution</artifactId>
+  <groupId>com.microsoft.terraform.samples</groupId>
+  <artifactId>terraform-spring-boot-samples-solution</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>Terraform Spring Boot solution</name>
+  <name>Terraform Spring Boot samples solution</name>
   <url>https://github.com/Microsoft/terraform-spring-boot</url>
 
   <properties>
@@ -41,9 +41,7 @@
   </developers>
 
   <modules>
-    <module>terraform-client</module>
-    <module>terraform-spring-boot-autoconfigure</module>
-    <module>terraform-spring-boot-starter</module>
-    <module>terraform-spring-boot-samples</module>
+    <module>raw-client-library-sample</module>
+    <module>spring-starter-sample</module>
   </modules>
 </project>

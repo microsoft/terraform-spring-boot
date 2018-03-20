@@ -2,11 +2,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.microsoft.terraform</groupId>
-  <artifactId>terraform-spring-boot-solution</artifactId>
+  <artifactId>terraform-client</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
-  <name>Terraform Spring Boot solution</name>
+  <name>Terraform Client for Java developers</name>
   <url>https://github.com/Microsoft/terraform-spring-boot</url>
 
   <properties>
@@ -40,10 +40,16 @@
     </developer>
   </developers>
 
-  <modules>
-    <module>terraform-client</module>
-    <module>terraform-spring-boot-autoconfigure</module>
-    <module>terraform-spring-boot-starter</module>
-    <module>terraform-spring-boot-samples</module>
-  </modules>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

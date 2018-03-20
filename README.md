@@ -3,7 +3,7 @@
 
 ## Introduction
 
-This repository is for Spring Boot Starters of Terraform client using Azure services.
+This repository is for Spring Boot Starters of Terraform client.
 
 ## Contributing
 
