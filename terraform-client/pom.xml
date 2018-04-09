@@ -3,7 +3,7 @@
 
   <groupId>com.microsoft.terraform</groupId>
   <artifactId>terraform-client</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <packaging>jar</packaging>
 
   <name>Terraform Client for Java developers</name>

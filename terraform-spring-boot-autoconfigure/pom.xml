@@ -2,8 +2,8 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.microsoft.terraform</groupId>
-  <artifactId>terraform-spring-boot</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <artifactId>terraform-spring-boot-autoconfigure</artifactId>
+  <version>1.0.0</version>
   <packaging>jar</packaging>
 
   <name>Terraform Spring Boot Auto-configure</name>
@@ -11,7 +11,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <azterraform.version>1.0-SNAPSHOT</azterraform.version>
+    <azterraform.version>1.0.0</azterraform.version>
     <springboot.version>1.5.10.RELEASE</springboot.version>
   </properties>
 
