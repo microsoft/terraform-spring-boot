@@ -7,6 +7,7 @@
   <packaging>jar</packaging>
 
   <name>Terraform Client for Java developers</name>
+  <description>Terraform client wrapper for Java developers</description>
   <url>https://github.com/Microsoft/terraform-spring-boot</url>
 
   <properties>

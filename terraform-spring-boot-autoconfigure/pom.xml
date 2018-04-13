@@ -7,6 +7,7 @@
   <packaging>jar</packaging>
 
   <name>Terraform Spring Boot Auto-configure</name>
+  <description>Terraform spring boot auto-configuration.</description>
   <url>https://github.com/Microsoft/terraform-spring-boot</url>
 
   <properties>

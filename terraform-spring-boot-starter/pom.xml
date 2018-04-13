@@ -6,6 +6,7 @@
   <version>1.0.0</version>
 
   <name>Terraform Spring Boot Starter</name>
+  <description>Terraform starter, including auto-configuration support.</description>
   <url>https://github.com/Microsoft/terraform-spring-boot</url>
 
   <scm>
