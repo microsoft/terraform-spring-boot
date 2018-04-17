@@ -136,11 +136,11 @@ public class TerraformClient implements AutoCloseable {
         return launcher;
     }
 
-	@Override
-	public void close() throws Exception {
+    @Override
+    public void close() throws Exception {
         this.executor.shutdownNow();
         if (!this.executor.awaitTermination(5, TimeUnit.SECONDS)) {
             throw new RuntimeException("executor did not terminate");
         }
-	}
+    }
 }
