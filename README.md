@@ -80,7 +80,7 @@ public class SpringStarterSampleApp implements CommandLineRunner {
             this.terraform.setErrorListener(System.err::println);
 
             this.terraform.setWorkingDirectory("/some/local/path/");
-            this.terraform..plan().get();
+            this.terraform.plan().get();
             this.terraform.apply().get();
         } finally {
             this.terraform.close();
