@@ -22,6 +22,7 @@ public class TerraformClient implements AutoCloseable {
     private File workingDirectory;
     private boolean inheritIO;
     private Consumer<String> outputListener, errorListener;
+    private Map<String, String> extraEnvVars = Collections.emptyMap();
 
     public TerraformClient() {
         this(new TerraformOptions());
@@ -66,6 +67,10 @@ public class TerraformClient implements AutoCloseable {
 
     public void setInheritIO(boolean inheritIO) {
         this.inheritIO = inheritIO;
+    }
+
+    public void setExtraEnvVars(Map<String, String> envVars) {
+        this.extraEnvVars = envVars;
     }
 
     public CompletableFuture<String> version() throws IOException {
@@ -130,6 +135,7 @@ public class TerraformClient implements AutoCloseable {
         launcher.setEnvironmentVariable(CLIENT_ID_ENV_NAME, this.options.getArmClientId());
         launcher.setEnvironmentVariable(SECRET_ENV_NAME, this.options.getArmClientSecret());
         launcher.setEnvironmentVariable(TENANT_ID_ENV_NAME, this.options.getArmTenantId());
+        extraEnvVars.forEach(launcher::setEnvironmentVariable);
         launcher.appendCommands(NON_INTERACTIVE_COMMAND_MAP.get(command));
         launcher.setOutputListener(this.getOutputListener());
         launcher.setErrorListener(this.getErrorListener());
