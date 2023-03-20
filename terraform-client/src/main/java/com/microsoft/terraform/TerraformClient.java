@@ -14,7 +14,7 @@ public class TerraformClient implements AutoCloseable {
     private static final Map<String, String> NON_INTERACTIVE_COMMAND_MAP = new HashMap<>();
     static {
         NON_INTERACTIVE_COMMAND_MAP.put(APPLY_COMMAND, "-auto-approve");
-        NON_INTERACTIVE_COMMAND_MAP.put(DESTROY_COMMAND, "-force");
+        NON_INTERACTIVE_COMMAND_MAP.put(DESTROY_COMMAND, "-auto-approve");
     }
 
     private final ExecutorService executor = Executors.newWorkStealingPool();
