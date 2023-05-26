@@ -13,7 +13,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <azterraform.version>1.0.0</azterraform.version>
-    <springboot.version>1.5.10.RELEASE</springboot.version>
+    <springboot.version>2.5.15</springboot.version>
   </properties>
 
   <scm>
